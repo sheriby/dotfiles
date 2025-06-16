@@ -55,3 +55,4 @@ zmodule zsh-users/zsh-autosuggestions
 # }}} End configuration added by Zim install
 zmodule romkatv/powerlevel10k --use degit
 
+zmodule Aloxaf/fzf-tab
