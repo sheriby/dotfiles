@@ -1,0 +1,35 @@
+{
+  "workbench.colorTheme": "One Dark Pro Flat",
+  "files.autoSave": "onFocusChange",
+  "editor.fontSize": 15,
+  "editor.fontFamily": "Hack Nerd Font, Hack Nerd Font, Maple Mono NF CN, Menlo, Monaco, 'Courier New', monospace",
+  "workbench.iconTheme": "vscode-great-icons",
+  "window.titleBarStyle": "custom",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape"
+    },
+    "jk": {
+      // Use lua to execute any logic
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "local code = require('vscode')",
+          "code.action('vscode-neovim.escape')",
+          "code.action('workbench.action.files.save')"
+        ]
+      ]
+    },
+  },
+  "animations.CursorAnimation": true,
+  "animations.Default-Duration": 200,
+  "animations.CursorAnimationOptions": {
+    "TrailLength": 8
+  },
+  "editor.smoothScrolling": true,
+}
+
+

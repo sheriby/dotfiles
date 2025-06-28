@@ -1,0 +1,30 @@
+[
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight",
+    },
+    {
+        "key": "ctrl+/",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.explorer.fileView.focus",
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.closeSidebar",
+        "when": "sideBarFocus"
+    },
+]
+
