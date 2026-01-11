@@ -110,7 +110,16 @@
                     "foreground": "#a2a5f3",
                     // "foreground": "#a298e7",
                 }
-            }
+            },
+            {
+                "scope": [
+                    "variable.parameter"
+                ],
+                "settings": {
+                    "foreground": "#ebac71",
+                    "fontStyle": "italic"
+                }
+            },
         ]
     },
     "animations.Install-Method": "Custom UI Style",
