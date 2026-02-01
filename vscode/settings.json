@@ -1,35 +1,131 @@
-{
-  "workbench.colorTheme": "One Dark Pro Flat",
-  "files.autoSave": "onFocusChange",
-  "editor.fontSize": 15,
-  "editor.fontFamily": "Hack Nerd Font, Hack Nerd Font, Maple Mono NF CN, Menlo, Monaco, 'Courier New', monospace",
-  "workbench.iconTheme": "vscode-great-icons",
-  "window.titleBarStyle": "custom",
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "vscode-neovim.compositeKeys": {
-    "jj": {
-      "command": "vscode-neovim.escape"
+{   "workbench.colorTheme": "Catppuccin Frappé",
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 15,
+    "editor.fontFamily": "Google Sans Code, Hack Nerd Font, Maple Mono NF CN, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "Google Sans Code",
+    "window.titleBarStyle": "custom",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
     },
-    "jk": {
-      // Use lua to execute any logic
-      "command": "vscode-neovim.lua",
-      "args": [
-        [
-          "local code = require('vscode')",
-          "code.action('vscode-neovim.escape')",
-          "code.action('workbench.action.files.save')"
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape"
+        },
+        "jk": {
+            // Use lua to execute any logic
+            "command": "vscode-neovim.lua",
+            "args": [
+                [
+                    "local code = require('vscode')",
+                    "code.action('vscode-neovim.escape')",
+                    "code.action('workbench.action.files.save')"
+                ]
+            ]
+        }
+    },
+    "vscode_custom_css.imports": [],
+    "animations.CursorAnimation": true,
+    "animations.Default-Duration": 200,
+    "animations.CursorAnimationOptions": {
+        "TrailLength": 6
+    },
+    "editor.smoothScrolling": true,
+    "explorer.confirmDelete": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorCustomizations": {
+        // === 代码补全提示框 (editorSuggestWidget) ===
+        // 背景色：比主编辑器背景稍亮，提供轻微区分
+        "editorSuggestWidget.background": "#2E3238",
+        // 边框色：使用与按钮或活动边框类似的强调色，增加深度
+        "editorSuggestWidget.border": "#4F5968",
+        // 选中的建议项背景色：One Dark Pro 风格的淡蓝色，柔和且明确
+        "editorSuggestWidget.selectedBackground": "#304050",
+        // 文本前景色：与编辑器文本色保持一致，确保可读性
+        "editorSuggestWidget.foreground": "#ABB2BF",
+        // 匹配的高亮文本颜色：使用 One Dark Pro 中常见的强调色（如青色或橙色），增加视觉焦点
+        "editorSuggestWidget.highlightForeground": "#61AFEF", // 蓝色强调
+        // 或者可以尝试橙色强调：
+        // "editorSuggestWidget.highlightForeground": "#E5C07B",
+        // === 鼠标悬停提示框 (editorHoverWidget) ===
+        // 背景色：与代码补全提示框背景保持一致，统一风格
+        "editorHoverWidget.background": "#2E3238",
+        // 边框色：与代码补全提示框边框一致
+        "editorHoverWidget.border": "#4F5968",
+        // 文本前景色：与编辑器文本色保持一致
+        "editorHoverWidget.foreground": "#ABB2BF",
+        // Link 颜色：悬停提示中的链接颜色，使用 One Dark Pro 的链接蓝色
+        "editorHoverWidget.linkForeground": "#61AFEF",
+        // color for inlay hits
+        // "editorInlayHint.typeForeground": "#8991b3",
+        "editorInlayHint.typeForeground": "#6b7a91",
+        "editorInlayHint.typeBackground": "#00000000",
+    },
+    "rust-analyzer.restartServerOnConfigChange": true,
+    "rust-analyzer.runnables.extraEnv": {
+        "PATH": "${env:HOME}/.cargo/bin:${env:PATH}"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "update.showReleaseNotes": false,
+    "catppuccin.italicKeywords": false,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    //following will be in italic
+                    "comment",
+                    // "function",
+                    // "entity.name.type.class", //class names
+                    // "constant", //String, Number, Boolean…, this, super
+                    // "storage", //static keyword
+                    "keyword.control" //import, export, return…
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    //following will be in italic
+                    // "meta.function-call",
+                    "entity.name.function",
+                    "support.function",
+                    // "entity.name.type.class", //class names
+                    // "constant", //String, Number, Boolean…, this, super
+                    // "storage", //static keyword
+                ],
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "variable"
+                ],
+                "settings": {
+                    "foreground": "#a2a5f3",
+                    // "foreground": "#a298e7",
+                }
+            },
+            {
+                "scope": [
+                    "variable.parameter"
+                ],
+                "settings": {
+                    "foreground": "#ebac71",
+                    "fontStyle": "italic"
+                }
+            },
         ]
-      ]
     },
-  },
-  "animations.CursorAnimation": true,
-  "animations.Default-Duration": 200,
-  "animations.CursorAnimationOptions": {
-    "TrailLength": 8
-  },
-  "editor.smoothScrolling": true,
+    "animations.Install-Method": "Custom UI Style",
+    "custom-ui-style.external.imports": [
+        "file:///Volumes/Data 1/Users/Sher/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    ],
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "workbench.iconTheme": "vscode-great-icons",
 }
-
-
