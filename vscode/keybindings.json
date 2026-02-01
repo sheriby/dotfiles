@@ -8,15 +8,15 @@
         "key": "ctrl+l",
         "command": "workbench.action.navigateRight",
     },
-    // {
-    //     "key": "ctrl+/",
-    //     "command": "workbench.action.terminal.focus"
-    // },
-    // {
-    //     "key": "ctrl+/",
-    //     "command": "workbench.action.terminal.focusNext",
-    //     "when": "terminalFocus"
-    // },
+    {
+        "key": "ctrl+/",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
     {
         "key": "ctrl+e",
         "command": "workbench.explorer.fileView.focus",
@@ -26,40 +26,5 @@
         "command": "workbench.action.closeSidebar",
         "when": "sideBarFocus"
     },
-    {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "-selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "-selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-    },
-    // {
-    //     "key": "ctrl+k",
-    //     "command": "selectPrevSuggestion",
-    //     "when": "editorTextFocus && suggestWidgetMutipleSuggestions && suggestWidgetVisible"
-    // },
-    // {
-    //     "key": "ctrl+j",
-    //     "command": "selectNextSuggestion",
-    //     "when": "editorTextFocus && suggestWidgetMutipleSuggestions && suggestWidgetVisible"
-    // }
-    // 在 keybindings.json 文件中
-    {
-        "key": "ctrl+alt+p", // 你的自定义快捷键
-        "command": "macros.cppGeneratePrintfFromLine",
-        "when": "editorTextFocus && editorLangId == cpp"
-    }
 ]
+

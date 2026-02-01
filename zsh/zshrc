@@ -208,16 +208,3 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval $(thefuck --alias fk)
-# 使用 fzf 搜索目录并进入
-fcd() {
-  local dir
-  dir=$(find ${1:-.} -path '*/.*' -prune -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-}
-# 模糊搜索文件并用编辑器打开
-fe() {
-  local files
-  IFS=$'\n' files=($(fzf --query="$1" --multi --select-1 --exit-0 \
-    --preview 'bat --style=numbers --color=always --line-range :500 {} 2>/dev/null || cat {}'))
-  [[ -n "$files" ]] && ${EDITOR:-nvim} "${files[@]}"
-}
