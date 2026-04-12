@@ -4,9 +4,16 @@
 --
 local map = vim.keymap.set
 
-map({ "n", "v" }, "J", "10j", { desc = "10j" })
-map({ "n", "v" }, "K", "10k", { desc = "10k" })
-map({ "n", "v" }, "L", "10l", { desc = "10l" })
-map({ "n", "v" }, "H", "10h", { desc = "10h" })
-map("i", "jj", "<esc>", { desc = "esc" })
-map("v", "Y", '"+y', { desc = "paste" })
+local step = 10
+map({ "n", "v" }, "J", step .. "j", { desc = "quick down" })
+map({ "n", "v" }, "K", step .. "k", { desc = "quick up" })
+-- map({ "n", "v" }, "L", "5l", { desc = "5l" })
+-- map({ "n", "v" }, "H", "5h", { desc = "5h" })
+--
+map("i", "jj", "<esc>", { desc = "quick esc" })
+map("n", " aq", 'F"lvf"h', { desc = "select q" })
+
+map("v", "Y", '"+y', { desc = "paste to system clipboard" })
+
+-- replace keymap K
+map("n", "gh", vim.lsp.buf.hover, { desc = "LSP: Show Hover Documentation" })
